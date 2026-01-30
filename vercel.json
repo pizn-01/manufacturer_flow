@@ -1,17 +1,15 @@
 {
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "." }
+      "src": "**/*",
+      "use": "@vercel/static"
     }
   ],
   "cleanUrls": true,
-  "redirects": [
+  "routes": [
     {
-      "source": "/",
-      "destination": "/signin.html",
-      "permanent": true
+      "src": "/",
+      "dest": "/signin.html"
     }
   ]
 }
